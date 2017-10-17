@@ -1,0 +1,23 @@
+{
+  "name": "wonderful-fx",
+  "version": "0.0.1",
+  "description": "Fixer.io long-term cache",
+  "main": "src/service.js",
+  "repository": "https://github.com/wonderfulco/wonderful-fx",
+  "author": "Brian Bagdasarian",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "babel": "babel-node src/service.js"
+  },
+  "dependencies": {
+    "popsicle": "^9.1.0",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
