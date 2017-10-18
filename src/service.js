@@ -1,5 +1,9 @@
-import * as p from 'popsicle';
+import Historical from './historical';
 
-p.get('http://api.fixer.io/latest').then((response) => {
-    console.log(response);
-})
+const h = new Historical();
+h.populate().then(() => {
+    console.log('seems to be done');
+}).catch((ex) => {
+    console.log('Something happened');
+    console.error(ex);
+});

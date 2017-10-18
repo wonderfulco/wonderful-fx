@@ -8,9 +8,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "babel": "babel-node src/service.js"
+    "babel-service": "babel-node src/service.js",
+    "test": "mocha test/*.test.js --require babel-register --reporter spec"
   },
   "dependencies": {
+    "moment": "^2.19.1",
     "popsicle": "^9.1.0",
     "redis": "^2.8.0"
   },
