@@ -2,14 +2,17 @@ import * as p from 'popsicle';
 
 export class FixerIO {
     constructor(base, symbols) {
-        if(base) {
+        if(base && Array.isArray(symbols)) {
             this.base = base;
+            this.symbols = symbols;
+        } else if(Array.isArray(base)) {
+            this.base = 'USD';
+            this.symbols = base;
+        } else if(base && !symbols) {
+            this.base = base;
+            this.symbols = [];
         } else {
             this.base = 'USD';
-        }
-        if(symbols) {
-            this.symbols = symbols;
-        } else {
             this.symbols = [];
         }
     }
